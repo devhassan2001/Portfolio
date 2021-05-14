@@ -31,7 +31,7 @@ section button {
 }
 span {
     cursor: pointer;
-    color: var(--main-color);
+    color: var(--secondary-color);
 }
 a {
     text-decoration: none;
@@ -431,7 +431,7 @@ nav ul li:hover {
 }
 @media only screen and (max-width: 1024px) {
     .animation {
-        animation-duration: 7s;
+        animation-duration: 7.3s;
     }
 }
 
@@ -458,7 +458,7 @@ nav ul li:hover {
         flex-direction: column;
     }
     .animation {
-        animation-duration: 5s;
+        animation-duration: 5.3s;
     }
 }
 @media only screen and (max-width: 657px) {
@@ -486,7 +486,7 @@ nav ul li:hover {
         margin-right: auto; 
     }
     .animation {
-        animation-duration: 3.5s;
+        animation-duration: 3.8s;
     }
     .break {
         display: none;
