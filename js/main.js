@@ -4,12 +4,17 @@ const menuList = document.getElementById('menu');
 const hamIcon = document.getElementById("ham-icon");
 const menu = document.getElementById("menu");
 const hamDivs = Array.from(document.querySelectorAll("#ham-icon div"))
+const arrowDown = document.querySelector('.arrow-down');
 let cards = Array.from(document.querySelectorAll("#card"));
 let i = 0;
 let j = 0;
 let screenWidth = Math.round(screen.width);
 
 
+// for arrow down
+arrowDown.addEventListener('click', () => {
+    document.querySelector(`.works`).scrollIntoView();
+})
 
 // for cards animation
 for(let i = 0; i < cards.length; i++)
