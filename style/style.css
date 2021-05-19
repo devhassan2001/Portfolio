@@ -152,6 +152,10 @@ nav ul li:hover {
     font-weight: 700;
     opacity: 1;
 }
+.active-li {
+    font-weight: 700;
+    opacity: 1;
+}
 
 .ham-icon {
     width: 2.3em;
@@ -236,6 +240,7 @@ nav ul li:hover {
 }
 .main-content p {
     margin: 15px 0;
+    padding: 0 10px 0 10px;
 }
 .main-content button {
     width: 230px;
@@ -273,7 +278,7 @@ nav ul li:hover {
     cursor: pointer;  
 }
 .animation {
-    animation: move 10s linear 1;
+    animation: move 10s linear ;
 }
 .works .card:hover {
     transform: scale(1.2,1.2);
@@ -287,11 +292,17 @@ nav ul li:hover {
         left: 100%;
     }
 }
+.works .card h3 {
+    font-weight: bold;
+}
 .works .card p {
     color: black;
+    padding: 0 5px 0 5px;
+    font-weight: bold;
 
 }
 .works .card img {
+    height: 150px;;
     border-bottom: 1px solid rgb(116, 115, 115);
 }
 .works button {
@@ -393,6 +404,7 @@ nav ul li:hover {
 }
 .about-me .container h3 {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 .about-me .container div {
     width: 350px;
@@ -419,6 +431,7 @@ nav ul li:hover {
     text-align: start;
     display: flex;
     align-items: center;
+    padding: 0 10px 0 10px;
 }
 
 .icons {
@@ -440,7 +453,7 @@ nav ul li:hover {
 }
 @media only screen and (max-width: 1024px) {
     .animation {
-        animation-duration: 7.3s;
+        animation-duration: 7s;
     }
 }
 
@@ -462,13 +475,18 @@ nav ul li:hover {
     }
     .about-me .container {
         grid-template-columns: auto;
+
     }
     .contact .container {
         flex-direction: column;
     }
     .animation {
-        animation-duration: 5.3s;
+        animation-duration: 6s;
     }
+    .icons {
+        padding-right: 50px;
+    }
+
 }
 @media only screen and (max-width: 657px) {
     .skills .container {
@@ -495,7 +513,7 @@ nav ul li:hover {
         margin-right: auto; 
     }
     .animation {
-        animation-duration: 3.8s;
+        animation-duration: 4.2s;
     }
     .break {
         display: none;

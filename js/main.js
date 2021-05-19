@@ -11,10 +11,10 @@ let j = 0;
 let screenWidth = Math.round(screen.width);
 
 
-// for arrow down
 arrowDown.addEventListener('click', () => {
     document.querySelector(`.works`).scrollIntoView();
 })
+
 
 // for cards animation
 for(let i = 0; i < cards.length; i++)
@@ -50,6 +50,11 @@ let id = setInterval(() => {
 navList.addEventListener('click', (e) => {
     if(e.target.nodeName == "LI")
     {
+        for(let i = 0; i < navList.children.length; i++)
+        {
+            navList.children[i].classList.remove('active-li');
+        }
+        e.target.classList.add('active-li');
         document.querySelector(`.${e.target.innerHTML}`).scrollIntoView();
     }
 })
@@ -69,6 +74,7 @@ menuList.addEventListener('click', (e) => {
 })
 
 
+
 // for ham-icon animation
 hamIcon.addEventListener("click", () => {
     menu.classList.toggle("active-menu");
@@ -76,3 +82,13 @@ hamIcon.addEventListener("click", () => {
     hamDivs[1].classList.toggle("active-middle-div");
     hamDivs[2].classList.toggle("active-div3");
 });
+
+document.addEventListener("click", (e) => {
+    if(hamDivs[0].classList.contains('active-div1') && e.target.parentNode.id !== 'ham-icon')
+    {
+        menu.classList.toggle("active-menu");   
+        hamDivs[0].classList.toggle("active-div1");
+        hamDivs[1].classList.toggle("active-middle-div");
+        hamDivs[2].classList.toggle("active-div3");        
+    }
+})
